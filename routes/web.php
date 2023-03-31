@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', function (){
+  return view('sidebar');
+});
+
+Route::get('/home', function (){
+  return view('home');
+});
+    
+Route::get('/content', function (){
+  return view('content');
+});
+
+Route::get('/footer', function (){
+  return view('footer');
+});
+    
+
+
